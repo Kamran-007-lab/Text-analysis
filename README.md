@@ -2,6 +2,8 @@
 
 This is a single-page application for string replacement and real-time text analysis built using **React** and **Vite**, styled with **Tailwind CSS**.
 
+### Bonus feature - Text Highlighting
+
 ## How to Run Locally
 
 ### Prerequisites
