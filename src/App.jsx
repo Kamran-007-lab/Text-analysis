@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlineCheckCircle } from "react-icons/ai";
+import { FaKeyboard } from "react-icons/fa";
 
 const App = () => {
   const [text, setText] = useState("");
@@ -70,7 +71,7 @@ const App = () => {
       }}
     >
       <div className="w-full max-w-xl bg-white p-6 rounded-2xl shadow-2xl shadow-black relative">
-        <h1 className="text-2xl font-bold text-center mb-4 z-10">Text Analysis</h1>
+        <h1 className="text-2xl font-bold text-center mb-4 z-10 flex justify-center items-center gap-8 font-mono"><FaKeyboard className="mt-1"/> Text Analysis <FaKeyboard className="mt-1"/></h1>
         <div
           className="absolute h-44 mx-6 top-[12%] inset-0 p-4 whitespace-pre-wrap pointer-events-none bg-white rounded-lg overflow-hidden z-10 text-transparent"
         >
@@ -81,16 +82,16 @@ const App = () => {
           className="w-full p-4 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 bg-transparent relative z-10 caret-black"
           rows="6"
           value={text}
-          placeholder="Enter your text. Apply punctuation"
+          placeholder="Enter your text."
           onChange={handleTextChange}
         />
 
         <div className="mt-4 text-gray-700">
-          <p className="text-lg">
+          <p className="text-lg font-bold">
             Unique Words:{" "}
             <span className="font-semibold">{getUniqueWordsCount()}</span>
           </p>
-          <p className="text-lg">
+          <p className="text-lg font-bold">
             Characters (Excluding spaces & punctuation):{" "}
             <span className="font-semibold">{getCharacterCount()}</span>
           </p>
@@ -113,7 +114,7 @@ const App = () => {
           />
           <button
             onClick={handleReplace}
-            className="w-full p-3 bg-sky-200 text-gray-700 rounded-lg hover:bg-sky-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full p-3 font-semibold bg-gradient-to-br from-slate-100 to-sky-200 text-gray-700 rounded-lg hover:from-slate-400 to hover:to-sky-100 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:scale-105 duration-200"
           >
             Replace All
           </button>
